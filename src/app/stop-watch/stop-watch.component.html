@@ -1,0 +1,18 @@
+<h1 class="center">Stop Watch</h1>
+<p class="center">Click the stop button to stop the clock</p>
+<hr />
+<div class="bg-black text-color-red d-flex center">
+  <div class="bg-black text-danger">{{ time.hours }} :</div>
+  <div class="bg-black text-danger">{{ time.minutes }}:</div>
+  <div class="bg-black text-danger">{{ time.seconds }} , {{ zero() }}:</div>
+  <div class="bg-black text-danger">{{ time.milliseconds }}</div>
+</div>
+<div class="container center mt-4">
+  <button class="btn btn-primary" (click)="handleInterval('start')">
+    Start
+  </button>
+  <button class="btn btn-danger" (click)="handleInterval('stop')">Stop</button>
+  <button class="btn btn-success" (click)="handleInterval('reset')">
+    Reset
+  </button>
+</div>
